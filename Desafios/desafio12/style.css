@@ -46,6 +46,7 @@ section>p{
     background-image: url(imagens/background001.jpg);
     background-size: 100vh;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: right bottom;
 }
 .imgcolor>p{
@@ -60,6 +61,7 @@ section>p{
 #img2{
     background-image: url(imagens/background002.jpg);
     background-size: 100vh;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 footer{
