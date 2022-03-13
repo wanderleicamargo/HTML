@@ -41,6 +41,7 @@ section{
 }
 section>p{
     margin-left: 6vw;
+    margin-bottom: 8vw;
 }
 #img1{
     background-image: url(imagens/background001.jpg);
