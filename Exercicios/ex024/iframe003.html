@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iframes</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        iframe#tela{
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nihil, facilis veritatis eaque dolorum mollitia adipisci, suscipit rerum dignissimos ipsam esse magnam voluptate eligendi minima similique reprehenderit deleniti beatae fugit.</p>
+    <ul>
+        <li><a href="https://www.youtube.com/embed/YuVks8EPlO8" target="tela">Primeira Página</a></li>
+        <li><a href="paginasExtras/pag002.html" target="tela">Segunda Página</a></li>
+        <li><a href="paginasExtras/pag003.html" target="tela">Terceira Página</a></li>
+    </ul>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ad magnam dicta voluptas. Corrupti placeat dignissimos molestiae nam id ipsum animi ab fugit reprehenderit, nisi voluptatem. Officiis vero hic odio?</p>
+    
+    <iframe name="tela" id="tela" srcdoc="<h1>Escolha uma das opções acima</h1><ul><li><a href='paginasExtras/pag003.html' target='tela'>Terceira Página</a></li><li><a href='paginasExtras/pag002.html' target='tela'>Segunda Página</a></li></ul>"></iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores perferendis quidem porro tempora saepe corporis qui explicabo dicta maxime, earum tempore, modi nesciunt totam sit in odit nam quaerat expedita.</p>
+    
+</body>
+</html>
