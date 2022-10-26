@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 70px;
+            text-align: center;
+        }
+        label{
+            display: block;
+        }
+        #principal{
+            background-color: aquamarine;
+            width: fit-content;
+            padding: 10px;
+        }
+        #res{
+            margin: 10px auto;
+            text-align: center;
+            background-color: brown;
+            width: 80px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="principal">
+    <P>Informe o peso e a altura</P>
+    <input type="number" placeholder="ALTURA" name="altura
+    " id="alt">
+    <input type="number" name="pes" placeholder="PESO" id="pes">
+    <input type="submit" value="IR" style="display: block; margin: 10px auto" onclick="ir()">
+    <div id="res">Resultado</div>
+    </div>
+    <script>
+        a = document.getElementById('alt')
+        p = document.getElementById('pes')
+        function imc(a, p){
+            x = a*a;
+            z = p/x;
+            return z
+        }
+        function ir(){
+            
+            alert(imc(a.value, p.value))
+            res = document.getElementById('res')
+
+        }
+    </script>
+</body>
+</html>

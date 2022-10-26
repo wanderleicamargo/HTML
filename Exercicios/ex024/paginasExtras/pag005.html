@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        a{
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        div{
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="clicar()">Click em mim</a>
+    <div id="saida"></div>
+    <script>
+        a=1
+        function clicar(){
+            s = window.document.getElementById("saida")
+            if (a == 1){
+                s.innerHTML="Clicou "+a+" vez";}else{
+                    s.innerHTML="Clicou "+a+" vezes";
+                    
+                }
+            a++
+            
+        }
+    </script>
+</body>
+</html>
