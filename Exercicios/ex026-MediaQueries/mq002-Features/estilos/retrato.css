@@ -1,0 +1,10 @@
+@charset "UTF-8";
+h1{
+    
+    text-shadow: 2px 2px 5px white;
+    font-size: 5vw;
+}
+body{
+    background-image: url(/Exercicios/ex026-MediaQueries/mq002-Features/imagens/cev-portrait.jpg);
+    background-position: center bottom;
+}
