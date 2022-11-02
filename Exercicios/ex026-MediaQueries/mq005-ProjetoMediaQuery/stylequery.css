@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @media screen and (min-width:550px) and (max-width:800px){
     header{
-        background-color: blue;
+        background-color: rgb(167, 166, 166);
     }
     #icon{
         display: none;
@@ -12,13 +12,9 @@
     }
     menu>ul>li{
         display: inline-block;
-        border: 2px solid balck;
     }
     menu>ul{
         position: relative;
-    }
-    menu>ul>li>a{
-        border: none;
     }
 }
 @media screen and (min-width:801px) {

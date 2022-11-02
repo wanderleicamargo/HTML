@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@media screen and (min-width:550px) and (max-width:1000px){
+    body{
+        background-image: linear-gradient(to top, #4faaa5, #5d2b81);
+        background-size: cover;
+        height: 100vh;
+    }
+    main{
+        position: relative;
+        width: 90vw;
+        height: 250px;
+    }
+    .principals{
+        display: inline;
+        position: static;
+    }
+    main{
+        overflow: visible;
+    }
+    #img{
+        width: 30%;
+        height: 100%;
+        float: left;
+    }
+    #login{
+        width: 70%;
+        float: right;
+    }
+    .bInput{
+        width: 90%;
+    }
+    
+}
+@media screen and (min-width:1001px) {
+    body{
+        background-image: linear-gradient(to top, #4faaa5, #5d2b81);
+        background-size: cover;
+        height: 100vh;
+    }
+    main{
+        position: relative;
+        width: 90vw;
+        height: 250px;
+    }
+    .principals{
+        display: inline;
+        position: static;
+    }
+    main{
+        overflow: visible;
+    }
+    #img{
+        width: 50%;
+        height: 100%;
+        float: left;
+        transition: width 1s;
+    }
+    #login{
+        width: 50%;
+        float: right;
+        transition: width 1s;
+
+    }
+    .bInput{
+        width: 90%;
+    }
+    
+}

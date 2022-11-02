@@ -10,12 +10,6 @@ body{
 header{
     background-color: rgb(167, 166, 166);
 }
-header h1{
-    text-align: center;
-    padding: 20px;
-    z-index: 1;
-}
-
 article h2{
     padding: 10px;
     }
@@ -44,7 +38,7 @@ menu>ul{
     list-style-type: none;
     width: 100vw;
 }
-menu>ul>li>a{
+.link{
     display: block;
     padding: 10px;
     text-decoration: none;
@@ -52,6 +46,10 @@ menu>ul>li>a{
     color: white;
     text-align: center;
     border-top: 2px solid gray;
+    transition: background-color 1s;
+}
+.link:hover{
+    background-color: rgb(122, 121, 121);
 }
 #menu{
     display: block;
@@ -73,4 +71,13 @@ main{
 }
 span{
     display: none;
+}
+#testeT{
+    background-color: red;
+    width: 80px;
+    height: 80px;
+    transition: width 2s;
+}
+#testeT:hover{
+    width: 180px;
 }
