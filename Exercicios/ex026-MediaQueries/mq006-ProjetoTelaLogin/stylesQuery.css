@@ -5,17 +5,14 @@
         background-size: cover;
         height: 100vh;
     }
-    main{
+    section{
         position: relative;
-        width: 90vw;
+        max-width: 800px;
         height: 250px;
     }
     .principals{
         display: inline;
         position: static;
-    }
-    main{
-        overflow: visible;
     }
     #img{
         width: 30%;
@@ -26,9 +23,6 @@
         width: 70%;
         float: right;
     }
-    .bInput{
-        width: 90%;
-    }
     
 }
 @media screen and (min-width:1001px) {
@@ -37,18 +31,16 @@
         background-size: cover;
         height: 100vh;
     }
-    main{
+    section{
+        max-width: 800px;
         position: relative;
-        width: 90vw;
         height: 250px;
     }
     .principals{
         display: inline;
         position: static;
     }
-    main{
-        overflow: visible;
-    }
+    
     #img{
         width: 50%;
         height: 100%;
@@ -60,9 +52,6 @@
         float: right;
         transition: width 1s;
 
-    }
-    .bInput{
-        width: 90%;
     }
     
 }

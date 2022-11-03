@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 body{
+    position: relative;
     height: 90vh;
     background-color: #5d2b81;
     background-repeat: no-repeat;
@@ -13,15 +14,22 @@ body{
     width: 0px;
 }
 main{
-    position: absolute;
-    background-color: white;
-    width: 250px;
-    height: 500px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 25px -5px black;
+    margin: auto 40px;
+    position: relative;
+    height: 100vh;
+   
+}
+section{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    max-width: 250px;
+    position: relative;
+    background-color: white;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px -5px black;
+    
     overflow: hidden;
     transition: width .3s, height .3s;
 }
@@ -37,16 +45,13 @@ main{
     background-size: cover;
     box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.438);
 }
-main>div>h1{
+section>div>h1{
     text-align: center;
 }
 p{
     text-align: center;
     display: block;
     margin: auto 1px;
-}
-span{
-    color: white;
 }
 .bForm{
     position: relative;
@@ -57,18 +62,20 @@ span{
     border-radius: 10px;
 }
 .icon{
+    color: white;
     position: absolute;
     top: 7px;
     left: 15px;
 }
 .bInput{
+    text-align: center;
     border-radius: 10px;
     padding: 5px;
     margin: 1px;
     position: absolute;
-    right: 2px;
+    right: 0px;
     height: 95%;
-    width: 75%;
+    width: calc(100% - 55px);
     border: none;
     background-color: #93cfcb;
 }
@@ -88,12 +95,14 @@ span{
     border: 1px solid white;
 }
 .rBtn:active{
-    background-color: rgb(206, 206, 206);
+    background-color: #d9f8f7;
 }
 #btnSub{
     background-color: #4faaa5;
     color: white;
-    
+}
+#btnSub:active{
+    background-color: #a6dfdc;
 }
 
 #btnFor{

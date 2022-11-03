@@ -10,27 +10,37 @@
     <link rel="stylesheet" href="stylesQuery.css">
 </head>
 <body>
+    
     <main>
-        <div id="img" class="principals"></div>
-        <div id="login" class="principals">
-            <h1>Login</h1>
-            <p>BEM VINDO</p>
-            <form action="#" method="get">
-                <div class="bForm">
-                    <label for="iemail" class="icon"><span class="material-symbols-outlined">person</span></label>
-                    <input type="email" name="email" id="iemail" class="bInput" required>
-                </div>
-                <div class="bForm">
-                    <label for="isenha" class="icon"><span class="material-symbols-outlined">key</span></label>
-                    <input type="password" name="senha" id="isenha" class="bInput" title="Minimo 8 dígitos" required minlength="8">
-                </div>
-                <input type="submit" value="Entrar" class="rBtn" id="btnSub">
-            </form>
-            <button class="rBtn" id="btnFor">Esqueci a senha<span class="material-symbols-outlined" id="iconLock">lock</span></button>
-
-            
-            
-        </div>
+        <section>
+            <div id="img" class="principals"></div>
+            <div id="login" class="principals">
+                <h1>Login</h1>
+                <p>BEM VINDO</p>
+                <form action="#" method="get">
+                    <div class="bForm">
+                        <label for="iemail" class="icon"><span class="material-symbols-outlined">person</span></label>
+                        <input type="email" name="email" id="iemail" class="bInput" required placeholder="Digite seu Email">
+                    </div>
+                    <div class="bForm">
+                        <label for="isenha" class="icon"><span class="material-symbols-outlined">vpn_key</span></label>
+                        <input type="password" name="senha" id="isenha" class="bInput" title="Minimo 8 dígitos" required minlength="8" placeholder="Digite sua senha aqui">
+                    </div>
+                    <input type="submit" value="Entrar" class="rBtn" id="btnSub">
+                </form>
+                <button class="rBtn" id="btnFor">Esqueci a senha<span class="material-symbols-outlined" id="iconLock">lock</span></button>
+            </div>
+        </section>
     </main>
+    <script>
+        setInterval(placeHolder, 2000)
+        function placeHolder(){
+        if(isenha.placeholder=="Digite sua senha aqui"){
+            isenha.placeholder="Minimo 8 Digitos";
+        }else{
+            isenha.placeholder="Digite sua senha aqui"
+        }
+    }
+    </script>
 </body>
 </html>
