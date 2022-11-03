@@ -32,7 +32,7 @@
         height: 100vh;
     }
     section{
-        max-width: 800px;
+        max-width: 1200px;
         position: relative;
         height: 250px;
     }
@@ -44,12 +44,12 @@
     #img{
         width: 50%;
         height: 100%;
-        float: left;
+        float: right;
         transition: width 1s;
     }
     #login{
         width: 50%;
-        float: right;
+        float: left;
         transition: width 1s;
 
     }
