@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+        }
+        section{
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px 1px black;
+            left: 50%;
+            top: 50%;
+            position: relative;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+        h1{
+            color: white;
+            text-shadow:1px 1px 20px black;
+            position: relative;
+            top: 20px;
+            text-align: center;
+        }
+        button{
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid rgb(60, 211, 238);
+            margin: 12px;
+            padding: 4px;
+            font-weight: bolder;
+            transition: background-color 1s, color 1s, transform 2s;
+            box-shadow: 0px 2px 12px 0px rgb(0, 0, 0);
+        }
+        #caixas{
+            position: relative;
+            top: 120px;
+            width: fit-content;
+            margin: auto;
+        }
+        #resultado{
+            box-sizing: border-box;
+            color: white;
+            font-size: larger;
+            text-align: center;
+            position: fixed;
+            top: 250px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            padding: 5px;
+            width: fit-content;
+            height: fit-content;
+        }
+        button:hover{
+            transform: translate(0%, -10%);
+            background-color: rgb(25, 0, 255);
+            color: white;
+            border-color: white;
+        }
+        #clock{
+            box-sizing: content-box;
+            color: white;
+            position: fixed;
+            top: 80px;
+            left: 30px;
+        }
+        #zoac{
+            position: relative;
+            top: 250px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>QUAL LOTERIA?</h1>
+            <div id="clock"></div>
+            <div id="caixas">
+            <button id="btnmega" onclick="mega()">MEGA-SENA</button>
+            <button id="btnloto" onclick="loto()">LOTOFÁCIL</button>
+            </div>
+            <div id="resultado"></div>
+            <button id="zoac" onmouseover="zoa()" tabindex="-1" onclick="haha()">PRÓXIMOS NÚMEROS SORTEADOS</button>
+            
+        </section>
+    </main>
+    <script>
+    
+        
+        function mega(){
+            c=0;
+            let numeros = []
+            while(c<6){
+                num=Math.trunc(Math.random()*(60-1)+1);
+                if(numeros.indexOf(num)==-1){
+                    numeros.push(num);
+                    c++;
+                }
+            }
+            resultado.style="border: 2px solid white; border-radius: 5px;"
+            resultado.innerHTML=numeros.sort();
+        }
+        function loto(){
+            c=0;
+            let numeros = []
+            while(c<15){
+                num=Math.trunc(Math.random()*(25-1)+1);
+                if(numeros.indexOf(num)==-1){
+                    numeros.push(num);
+                    c++;
+                }
+            }
+            resultado.style="border: 2px solid white; border-radius: 5px;"
+            resultado.innerHTML=numeros;
+        }
+        function hora(){
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();    
+            clock.innerHTML=h+":"+m+":"+s
+        }
+        setInterval(hora, 10)
+        function zoa(){
+            let b = Math.random()*400;
+            let c = Math.random()*400
+            zoac.style="top:"+b+"px; left:"+c+"px";
+        }
+        function haha(){
+            alert("Coseguiu clicar")
+        }
+    </script>
+</body>
+</html>
