@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            width: 99vw;
+            height: 99vh;
+        }
+        section{
+            background-color: rgb(231, 156, 231);
+            border-radius: 10px;
+            position: relative;
+            width: fit-content;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.548);
+        }
+        h1, h3{
+            text-align: center;
+            margin: 20px;
+        }
+        label{
+            position: absolute;
+            left: 15px;
+            top: 3px;
+        }
+        #lpeso{
+            left: 30px;
+        }
+        #inputBox{
+            position: relative;
+            border: 1px solid black;
+            margin: 5px;
+            height: 25px;
+            background-color: rgb(149, 238, 238);
+            border-radius: 10px;
+            border: none;
+        }
+        input{
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            right: -2px;
+            border-radius: 10px;
+            height: 25px;
+            width: 200px;
+            border: none;
+        }
+        input:focus{
+            
+        }
+    
+        button{
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            margin: 20px 0px;
+            padding: 5px;
+            border: 2px solid aqua;
+            border-radius: 5px;
+            transition: border-color 1s, background-color 1s;
+        }
+        button:hover{
+            border-color: white;
+            background-color: rgb(212, 190, 194);
+        }
+        .resultado{
+            height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>TABELA IMC</h1>
+        <h3>INFORME O PESO E ALTURA</h3>
+        <div>
+            <div id="inputBox">
+                <label for="ipeso">PESO</label>
+                <input type="number" name="" id="ipeso"><br>
+            </div>
+            <div id="inputBox">
+                <label for="ialtura">ALTURA</label>
+                <input type="number" name="" id="ialtura" oninput="altura()" >
+            </div>
+            <button onclick="calc()" onmouseover="verif()" id="btn">ENVIAR</button>
+        </div>
+        <div id="iindice" class="resultado"> </div>
+        <div id="anamnese" class="resultado"> </div>
+    </section>        
+    <script>
+        let altura = () =>{
+            if(ialtura.value>100){
+            ialtura.value=ialtura.value/100;
+         } 
+        }
+        let calc=()=>{
+            p = ipeso.value;
+            a = ialtura.value**2;
+            imc = p/a;
+            iindice.innerHTML="<p>"+imc.toFixed(2)+"</p>";
+            if(imc<16){
+                anamnese.innerHTML='<p>MAGREZA 3</p>';
+                anamnese.style='color: red'
+            }else if(imc<17){
+                anamnese.innerHTML='<p>MAGREZA 2</p>';
+                anamnese.style='color: orange'
+            }else if(imc<18.5){
+                anamnese.innerHTML='<p>MAGREZA 1</p>';
+                anamnese.style='color: yellow'
+            }else if(imc<25){
+                anamnese.innerHTML='<p>PESO IDEAL</p>';
+                anamnese.style='color: green'
+            }else if(imc<30){
+                anamnese.innerHTML='<p>SOBREPESO</p>';
+                anamnese.style='color: green'
+            }else if(imc<35){
+                anamnese.innerHTML='<p>OBESIDADE 1</p>';
+                anamnese.style='color: yellow'
+            }else if(imc<40){
+                anamnese.innerHTML='<p>OBESIDADE 2</p>';
+                anamnese.style='color: orange'
+            }else{
+                anamnese.innerHTML='<p>OBESIDADE 3</p>';
+                anamnese.style='color: red'
+            }
+        }
+        pos = 1
+        let contar = 0;
+        let verif = ()=>{
+            if(ialtura.value==""||ipeso.value==""){
+                if(pos==1){
+                    btn.style='left: 80px'
+                    pos=2
+                }else if(pos==2){
+                    btn.style='left: 230px'
+                    pos=3 
+                }else{
+                    btn.style='left: 50%'
+                    pos=1
+                    contar++
+                }
+            }
+            if(contar==2){
+            alert('POR FAVOR PREENCHA OS DOIS CAMPOS');
+            contar=0;
+        }       
+        }
+        
+    </script>
+</body>
+</html>
